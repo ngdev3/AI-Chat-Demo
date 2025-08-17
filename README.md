@@ -43,7 +43,7 @@ A modern AI-powered chat application built with **Stream Chat**, **OpenAI**, and
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repository-url>
+git clone ai-chat-app-with-agents-getstream.git
 cd chat-ai-app
 ```
 
