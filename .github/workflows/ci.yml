@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run linter
+        run: npm run lint
+
+      - name: Build application
+        run: npm run build
+        env:
+          # We need to provide dummy values for the build to succeed,
+          # as the build process may require these variables.
+          DATABASE_URL: "postgresql://user:password@localhost:5432/mydb"
+          NEXTAUTH_SECRET: "dummy-secret"
+          NEXT_PUBLIC_APP_URL: "http://localhost:3000"
+          GOOGLE_CLIENT_ID: "dummy"
+          GOOGLE_CLIENT_SECRET: "dummy"
+          GROQ_API_KEY: "dummy"
+          STRIPE_API_KEY: "dummy"
+          STRIPE_WEBHOOK_SECRET: "dummy"
+          STRIPE_PRO_PRICE_ID: "dummy"
+          SERPER_API_KEY: "dummy"
