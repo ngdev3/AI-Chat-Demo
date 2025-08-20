@@ -74,8 +74,8 @@ Configure your `.env` file with the following keys:
 STREAM_API_KEY=your_stream_api_key_here
 STREAM_API_SECRET=your_stream_api_secret_here
 
-# OpenAI API key - Get from https://platform.openai.com/api-keys
-OPENAI_API_KEY=your_openai_api_key_here
+# GeminiAI API key - Get from https://platform.openai.com/api-keys
+GEMINIAI_API_KEY=your_geminiai_api_key_here
 
 # Tavily API key - Get from https://tavily.com
 TAVILY_API_KEY=your_tavily_api_key_here
@@ -172,7 +172,7 @@ graph TD
     A[Frontend React App] --> B[Stream Chat React Components]
     B --> C[Stream Chat API]
     C --> D[Backend Node.js Server]
-    D --> E[OpenAI API]
+    D --> E[GeminiAI API]
     D --> F[Tavily Web Search]
     D --> G[AI Agent Management]
 ```
