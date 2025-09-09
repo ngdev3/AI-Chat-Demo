@@ -49,7 +49,7 @@ export const Login: React.FC<LoginProps> = ({ onLogin }) => {
             <Bot className="h-6 w-6 text-primary-foreground" />
           </div>
           <CardTitle className="text-xl font-semibold">
-            Welcome to AI Assistant Develop By Er Rajat Gupta
+            Welcome to AI Develop By Er Rajat Gupta
           </CardTitle>
           <CardDescription className="text-sm text-muted-foreground">
             Enter your username to start chatting with your AI assistant Develop By Er Rajat Gupta.
